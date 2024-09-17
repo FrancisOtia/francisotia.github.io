@@ -35,7 +35,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.bio {
+.bio, .highlight {
     max-width: 600px;
     margin: 0 auto;
     font-size: 1rem;
@@ -80,7 +80,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.projects, .education, .contact {
+.projects, .education, .hobbies, .contact {
     text-align: center;
 }
 
