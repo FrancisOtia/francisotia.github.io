@@ -1,109 +1,125 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #005ce6, #38a800);
-    color: white;
+    background: #041836;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 3rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    margin-bottom: 1rem;
+    border-radius: 50%; /* Makes the profile picture rounded */
+    border: 3px solid #fff;
 }
 
 h1 {
-    font-size: 2.5rem;
+    margin: 10px 0;
 }
 
 .title {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #248fe7;
+    font-size: 1.5em;
 }
 
-.bio, .highlight {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1rem;
+.bio {
+    margin: 10px 0;
+    font-size: 1.1em;
 }
 
-.container {
-    width: 90%;
-    margin: auto;
-    max-width: 1200px;
+.highlight {
+    font-weight: 700;
 }
 
-section {
-    padding: 2rem 0;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+.skills, .projects, .education, .work-experience, .hobbies, .contact {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .skills ul {
     list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
 }
 
-.skills li {
-    background: white;
-    padding: 1rem;
+.skill {
+    display: inline-block;
+    background: #e7f1ff;
+    padding: 10px 15px;
+    margin: 5px;
     border-radius: 8px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: #005ce6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.skills i {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.project {
+    margin-bottom: 20px;
 }
 
-.projects, .education, .hobbies, .contact {
+.links {
+    display: flex;
+    justify-content: space-between; /* Makes the links appear side by side */
+}
+
+.links a {
+    background: #005CE6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
     text-align: center;
+    transition: background 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.links a:hover {
+    background: #003bb5; /* Darker blue on hover */
+}
+
+.experience {
+    margin-bottom: 15px;
 }
 
 footer {
-    background: #041836;
-    color: white;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-a {
-    color: #005ce6;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    padding: 10px 0;
+    background: #041836;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
-    .skills ul {
-        flex-direction: column;
-        align-items: center;
+    .links {
+        flex-direction: column; /* Stack links on small screens */
+    }
+
+    .links a {
+        margin: 5px 0; /* Add spacing between stacked links */
+    }
+
+    .profile-pic {
+        width: 120px; /* Smaller profile picture on mobile */
+        height: 120px;
     }
 }
