@@ -1,18 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('a[href^="#"]');
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Document is ready!');
 
-    for (let link of links) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
+    // Placeholder for future functionalities
+    // For example, you can add event listeners or dynamic content here.
 });
+
+// Optional: Smooth scroll for anchor links
+const links = document.querySelectorAll('a[href^="#"]');
+
+for (const link of links) {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+    });
+}
