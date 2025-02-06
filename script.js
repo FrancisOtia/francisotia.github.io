@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Document is ready!');
 
     // Placeholder for future functionalities
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("year").textContent = new Date().getFullYear();
+});
     // For example, you can add event listeners or dynamic content here.
 });
 
