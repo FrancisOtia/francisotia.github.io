@@ -1,0 +1,297 @@
+/*====================================================
+    GENERAL PAGE STYLING
+====================================================*/
+
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    margin:0;
+    padding:0;
+
+    width:100%;
+    height:100%;
+
+    font-family:'Open Sans',sans-serif;
+
+}
+
+#map{
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    width:100%;
+
+}
+
+
+/*====================================================
+    HEADINGS
+====================================================*/
+
+h2{
+
+    margin:12px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+h3{
+
+    margin:10px 0;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+}
+
+p{
+
+    margin:8px 0;
+
+    line-height:1.5;
+
+    color:#374151;
+
+}
+
+
+/*====================================================
+    OVERLAY PANELS
+====================================================*/
+
+.map-overlay{
+
+    position:absolute;
+
+    right:20px;
+
+    background:#f1f4f7;
+
+    border-radius:8px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+    overflow:auto;
+
+}
+
+.map-overlay h2{
+    color: #0731ba;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px 0;
+}
+
+/*====================================================
+    FEATURE INFORMATION PANEL
+====================================================*/
+
+#features{
+
+    top:20px;
+
+    width:320px;
+
+    min-height:180px;
+
+    padding:12px;
+
+}
+
+
+/*====================================================
+    LEGEND
+====================================================*/
+
+#legend{
+
+    bottom:30px;
+
+    width:220px;
+
+    padding:15px;
+
+}
+
+#legend strong{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    font-size:16px;
+
+}
+
+#legend div{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:8px;
+
+}
+
+
+/*====================================================
+    LEGEND SYMBOL
+====================================================*/
+
+.legend-key{
+
+    display:inline-block;
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:3px;
+
+    margin-right:10px;
+
+    border:1px solid rgba(0,0,0,.25);
+
+    flex-shrink:0;
+
+}
+
+
+/*====================================================
+    MAPBOX CONTROLS
+====================================================*/
+
+.mapboxgl-ctrl-top-left{
+
+    margin-top:15px;
+
+    margin-left:15px;
+
+}
+
+.mapboxgl-ctrl-geocoder{
+
+    width:300px !important;
+
+    min-width:300px;
+
+}
+
+
+/*====================================================
+    POPUP
+====================================================*/
+
+.mapboxgl-popup-content{
+
+    font-family:'Open Sans',sans-serif;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+.mapboxgl-popup-content strong{
+
+    color:#111827;
+
+}
+
+/*====================================================
+    COLLAPSIBLE LEGEND
+====================================================*/
+
+#legend{
+
+    bottom:20px;
+
+    right:20px;
+
+    width:220px;
+
+    overflow:hidden;
+
+}
+
+#legend-toggle{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:#0f4c81;
+
+    color:white;
+
+    padding:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    border-radius:6px;
+
+}
+
+#legend-toggle:hover{
+
+    background:#0b3a61;
+
+}
+
+#legend-content{
+
+    max-height:500px;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+    padding:12px;
+
+}
+
+#legend.collapsed #legend-content{
+
+    max-height:0;
+
+    padding-top:0;
+
+    padding-bottom:0;
+
+}
+
+@media(max-width:768px){
+
+    #legend{
+
+        width:190px;
+
+    }
+
+}
