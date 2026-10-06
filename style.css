@@ -492,6 +492,83 @@ p { max-width: 68ch; }
 
 .contact-list a { font-weight: 600; }
 
+/* ---------- Upwork (top bar + bottom band) ---------- */
+
+.upwork-bar {
+    display: block;
+    background: linear-gradient(90deg, #0A6600, #0E7C00);
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.upwork-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    padding: 0.6rem 0;
+}
+
+.upwork-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+}
+.upwork-badge i { font-size: 1.15rem; }
+
+.upwork-bar-text {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.upwork-bar-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    color: #0A5C00;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.95rem;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.upwork-bar:hover .upwork-bar-action,
+.upwork-bar:focus-visible .upwork-bar-action { background: var(--stake); color: var(--ink); }
+.upwork-bar:active .upwork-bar-action { transform: translateY(1px); }
+
+.upwork-cta {
+    background: #0E7C00;
+    color: #fff;
+    padding: clamp(2.5rem, 6vw, 4rem) 0;
+    border-top: 4px solid var(--stake);
+}
+
+.upwork-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+}
+
+.upwork-cta h2 { color: #fff; margin-bottom: 0.5rem; }
+.upwork-cta p { color: #fff; }
+
+.btn-upwork {
+    background: #fff;
+    color: #0A5C00;
+    font-size: 1.05rem;
+    padding: 0.95rem 1.7rem;
+}
+.btn-upwork:hover { background: var(--stake); color: var(--ink); }
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -542,6 +619,7 @@ p { max-width: 68ch; }
     .project { grid-template-columns: 1fr; gap: 0.5rem; }
     .links a { flex: 1 1 100%; text-align: center; }
     .story-cta .btn { width: 100%; }
+    .btn-upwork { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
